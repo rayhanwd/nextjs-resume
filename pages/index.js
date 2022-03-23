@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaBars } from 'react-icons/fa';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../components/header/Header';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
@@ -30,23 +29,19 @@ const Index = () => {
   }, []);
   return (
     <>
-      <div onClick={() => handleClick()} className="mobile-nav-toggle d-xl-none">
-        <FaBars />
-      </div>
       <Header />
-      <Hero />
-      <main id="main">
+      <main className="bg-slate-200">
+        <Hero />
         <About />
-        <Skill />
         <Resume />
         <Facts />
-        <Portfolio />
+        <Skill />
         <Testimonial />
+        <Portfolio />
         <Services />
         <Contact />
-        <Footer />
       </main>
-      <a href="#" className="back-to-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
+      <Footer />
     </>
   );
 };

@@ -2,55 +2,54 @@ import React from 'react';
 
 const Skill = () => {
   return (
-    <section id="skills" className="skills section-bg">
-      <div className="container">
-        <div className="section-title">
-          <h2>Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <section id="skill" className="text-gray-600 body-font">
+      <div className="container px-5 pt-10 pb-20 mx-auto">
+        <div className="inline-block">
+          <h1 className="font-medium title-font mb-2 text-white bg-slate-800 rounded-md px-3 py-2">
+            Skill and Expertist
+          </h1>
         </div>
-        <div className="row skills-content">
-          <div className="col-lg-6" data-aos="fade-up">
-            <div className="progress">
-              <span className="skill">HTML <i className="val">100%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">CSS <i className="val">90%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">JavaScript <i className="val">75%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
+        <div className="flex flex-wrap items-center">
+          <div className="md:w-1/2">
+            <p className="my-3">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
           </div>
-
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div className="progress">
-              <span className="skill">Node <i className="val">80%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          <div className="md:W-1/2" data-aos="fade-up">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-3">
+              <div>
+                <h6 className="uppercase my-2">Node Js</h6>
+                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
+                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
+                </div>
               </div>
-            </div>
-            <div className="progress">
-              <span className="skill">MongoDB <i className="val">90%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              <div>
+                <h6 className="uppercase my-2">Node Js</h6>
+                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
+                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
+                </div>
               </div>
-            </div>
-            <div className="progress">
-              <span className="skill">React <i className="val">93%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              <div>
+                <h6 className="uppercase my-2">Node Js</h6>
+                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
+                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
+                </div>
+              </div>
+              <div>
+                <h6 className="uppercase my-2">Node Js</h6>
+                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
+                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
+                </div>
+              </div>
+              <div>
+                <h6 className="uppercase my-2">Node Js</h6>
+                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
+                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
+                </div>
+              </div>
+              <div>
+                <h6 className="uppercase my-2">Node Js</h6>
+                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
+                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
+                </div>
               </div>
             </div>
           </div>

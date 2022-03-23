@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer style={{"textAlign":"center"}}><p>{`Resume © ${new Date().getFullYear()}  Created by Kazi Rayhan`}</p></footer>
+    <footer className="text-center bg-slate-900 pb-5 text-slate-100"><p>{`Resume © ${new Date().getFullYear()}  Created by Kazi Rayhan`}</p></footer>
   )
 }
 

@@ -2,46 +2,26 @@ import React from 'react';
 
 const Facts = () => {
   return (
-    <section id="facts" className="facts">
-      <div className="container">
-        <div className="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <section className="text-gray-600 body-font">
+      <div className="container px-5 py-24 mx-auto">
+        <div className="flex flex-wrap -m-4 text-center">
+          <div className="p-4 sm:w-1/4 w-1/2">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">2.7K</h2>
+            <p className="leading-relaxed">Users</p>
+          </div>
+          <div className="p-4 sm:w-1/4 w-1/2">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">1.8K</h2>
+            <p className="leading-relaxed">Subscribes</p>
+          </div>
+          <div className="p-4 sm:w-1/4 w-1/2">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">35</h2>
+            <p className="leading-relaxed">Downloads</p>
+          </div>
+          <div className="p-4 sm:w-1/4 w-1/2">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">4</h2>
+            <p className="leading-relaxed">Products</p>
+          </div>
         </div>
-
-        <div className="row no-gutters">
-          {/* in put row */}
-          <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div className="count-box">
-              <i className="bi bi-emoji-smile"></i>
-              {/* <Counter start={0} end={100} delay={10} /> */}
-              <p><strong>Happy Clients</strong> consequuntur quae</p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div className="count-box">
-              <i className="bi bi-journal-richtext"></i>
-              {/* <Counter start={0} end={100} delay={10} /> */}
-              <p><strong>Projects</strong> adipisci atque cum quia aut</p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div className="count-box">
-              <i className="bi bi-headset"></i>
-              {/* <Counter start={0} end={100} delay={10} /> */}
-              <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div className="count-box">
-              <i className="bi bi-people"></i>
-              {/* <Counter start={0} end={100} delay={10} /> */}
-              <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
-            </div>
-          </div>
-
-        </div>
-
       </div>
     </section>
   )

@@ -2,16 +2,15 @@ import React from "react";
 
 const Resume = () => {
     return (
-        <section id="resume" className="resume">
-      <div className="container">
-
-        <div className="section-title">
-          <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <section id="resume" className="text-gray-600 body-font">
+      <div className="container px-5 py-10 mx-auto">
+        <div className="inline-block">
+          <h1 className="font-medium title-font mb-2 text-white bg-slate-800 rounded-md px-3 py-2">
+            Resume
+          </h1>
         </div>
-
-        <div className="row">
-          <div className="col-lg-6" data-aos="fade-up">
+        <div className="flex flex-wrap">
+          <div className="md:w-1/2" data-aos="fade-up">
             <h3 className="resume-title">Sumary</h3>
             <div className="resume-item pb-0">
               <h4>Alex Smith</h4>
@@ -22,7 +21,6 @@ const Resume = () => {
                 <li>alice.barkley@example.com</li>
               </ul>
             </div>
-
             <h3 className="resume-title">Education</h3>
             <div className="resume-item">
               <h4>Master of Fine Arts &amp; Graphic Design</h4>
@@ -37,7 +35,7 @@ const Resume = () => {
               <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
             </div>
           </div>
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div className="md:w-1/2 my-5" data-aos="fade-up" data-aos-delay="100">
             <h3 className="resume-title">Professional Experience</h3>
             <div className="resume-item">
               <h4>Senior graphic design specialist</h4>
@@ -63,7 +61,6 @@ const Resume = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
     )

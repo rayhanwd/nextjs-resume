@@ -2,17 +2,18 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="about">
-      <div className="container">
-        <div className="section-title">
-          <h2>About</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <section id="about" className="text-gray-600 body-font">
+      <div className="container px-5 pt-10 pb-20 mx-auto">
+      <div className="inline-block">
+          <h1 className="font-medium title-font mb-2 text-white bg-slate-800 rounded-md px-3 py-2">
+            About
+          </h1>
         </div>
-        <div className="row">
-          <div className="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" className="img-fluid" alt=""/>
+        <div className="flex flex-wrap justify-between items-center">
+          <div className="lg:w-4/12" data-aos="fade-right">
+            <img src="assets/img/profile-img.jpg" className="w-72" alt="" />
           </div>
-          <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <div className="lg:w-8/12 pt-4 pt-lg-0" data-aos="fade-left">
             <h3>Javascript/Node Developer</h3>
             <p className="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
