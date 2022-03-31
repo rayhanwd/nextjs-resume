@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdLocationPin, MdEmail, MdLocalPhone } from 'react-icons/md';
+import { MdEmail } from 'react-icons/md';
 
 const Services = () => {
 
@@ -92,14 +92,8 @@ const Services = () => {
 export default Services;
 
 export async function getStaticProps() {
-  const res = await fetch(`../../pages/api/service.json`)
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts")
   const data = await res.json()
+  console.log("data", data)
 
-  if (!data) {
-    return {
-      notFound: true,
-    }
-  }
-
-  return { props: data }
 }

@@ -84,14 +84,9 @@ const Portfolio = (props) => {
 export default Portfolio;
 
 export async function getStaticProps() {
-  const res = await fetch(`../../pages/api/service.json`)
-  const data = await res.json()
-
-  if (!data) {
-    return {
-      notFound: true,
-    }
-  }
-
-  return { props: data }
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await res.json();
+  return {
+    props: { posts },
+  };
 }
