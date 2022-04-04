@@ -49,7 +49,7 @@ const Index = ({skills}) => {
 export default Index;
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/skill')
+  const res = await fetch('https://www.rayhanjs.com/api/skill')
   const skills = await res.json()
   return {
     props: {
