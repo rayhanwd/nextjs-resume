@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Skill = () => {
+const Skill = ({ data }) => {
+
   return (
     <section id="skill" className="text-gray-600 body-font">
       <div className="container px-5 pt-10 pb-20 mx-auto">
@@ -15,42 +16,14 @@ const Skill = () => {
           </div>
           <div className="md:W-1/2" data-aos="fade-up">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-3">
-              <div>
-                <h6 className="uppercase my-2">Node Js</h6>
-                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
-                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
+              {data.map(({ id,name, ability }) => (
+                <div key={id}>
+                  <h6 className="uppercase my-2">{name}</h6>
+                  <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
+                    <div className="bg-slate-900 h-4" style={{ "width": ability + 'px' }}></div>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h6 className="uppercase my-2">Node Js</h6>
-                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
-                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
-                </div>
-              </div>
-              <div>
-                <h6 className="uppercase my-2">Node Js</h6>
-                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
-                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
-                </div>
-              </div>
-              <div>
-                <h6 className="uppercase my-2">Node Js</h6>
-                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
-                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
-                </div>
-              </div>
-              <div>
-                <h6 className="uppercase my-2">Node Js</h6>
-                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
-                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
-                </div>
-              </div>
-              <div>
-                <h6 className="uppercase my-2">Node Js</h6>
-                <div style={{ "width": 300 + 'px' }} className="bg-slate-100 h-4 mb-6">
-                  <div className="bg-slate-900 h-4" style={{ "width": 200 + 'px' }}></div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

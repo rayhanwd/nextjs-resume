@@ -13,7 +13,7 @@ import Portfolio from '../components/sections/Portfolio';
 import Services from '../components/sections/Services';
 import Contact from '../components/sections/Contact';
 import Footer from '../components/footer/Footer';
-const Index = () => {
+const Index = ({skills}) => {
   useEffect(() => {
     AOS.init({
       duration: 1000
@@ -35,7 +35,7 @@ const Index = () => {
         <About />
         <Resume />
         <Facts />
-        <Skill />
+        <Skill data={skills}/>
         <Testimonial />
         <Portfolio />
         <Services />
@@ -47,3 +47,13 @@ const Index = () => {
 };
 
 export default Index;
+
+export async function getStaticProps() {
+  const res = await fetch('http://localhost:3000/api/skill')
+  const skills = await res.json()
+  return {
+    props: {
+      skills,
+    },
+  }
+}
