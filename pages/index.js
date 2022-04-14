@@ -5,7 +5,6 @@ import Header from '../components/header/Header';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
 import Resume from '../components/sections/Resume';
-import Facts from '../components/sections/Facts';
 import Skill from '../components/sections/Skill';
 import Testimonial from '../components/sections/Testimonial';
 import Portfolio from '../components/sections/Portfolio';
@@ -33,7 +32,6 @@ const Index = ({skills,service}) => {
         <Hero />
         <About />
         <Resume />
-        <Facts />
         <Skill data={skills}/>
         <Testimonial />
         <Portfolio />

@@ -1,8 +1,8 @@
 import React from 'react';
-import { MdLocationPin, MdEmail, MdLocalPhone } from 'react-icons/md';
+import { MdEmail } from 'react-icons/md';
 
 const Portfolio = (props) => {
-  console.log(props)
+
   return (
     <section id="portfolio" className="text-gray-600 body-font">
       <div className="container px-5 py-10 mx-auto">
@@ -65,15 +65,7 @@ const Portfolio = (props) => {
             </div>
           </div>
           <div className="md:w-7/12 p-4">
-            <div className="flex bg-slate-100 rounded">
-              <div className="px-8 py-10  w-1/2">
-                <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Ride sharing application</h2>
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3"></h1>
-                <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                <p className="leading-relaxed py-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-              </div>
-              <img alt="gallery" className="w-1/2" src="./public/assets/img/hostel_app/account.PNG" />
-            </div>
+            <img alt="gallery" className="w-full h-full" src="assets/img/hostel_app/account.PNG" />
           </div>
         </div>
       </div>
@@ -82,11 +74,3 @@ const Portfolio = (props) => {
 }
 
 export default Portfolio;
-
-export async function getStaticProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts = await res.json();
-  return {
-    props: { posts },
-  };
-}

@@ -16,8 +16,7 @@ const About = () => {
           <div className="lg:w-8/12 pt-4 pt-lg-0" data-aos="fade-left">
             <h3>Javascript/Node Developer</h3>
             <p className="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            I am a professional front-end web developer. I specialize in React and Next js! – not just as a library or framework but as powerful frontend UI and client-side and server-side rendering tools.
             </p>
             <div className="row">
               <div className="col-lg-6">
@@ -38,8 +37,7 @@ const About = () => {
               </div>
             </div>
             <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+            {`I'd`} be more than happy to offer you my services, so feel free to contact me for an interview. I look forward to hearing from you.
             </p>
           </div>
         </div>
