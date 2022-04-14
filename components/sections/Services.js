@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdEmail } from 'react-icons/md';
 
-const Services = () => {
+const Services = ({data}) => {
+  const [filter, setName] = useState("frontend");
+
+  let items = data.filter((item) => item.name === filter);
+console.log(items)
+  const tabs = [{ id: 1,title:"Frontend", name: "frontend", icon: <MdEmail className="text-lg" /> },
+  { id: 1,title:"Backend", name: "backend", icon: <MdEmail className="text-lg" /> },
+  { id: 2,title:"Database", name: "database", icon: <MdEmail className="text-lg" /> },
+  { id: 3,title:"Frontend Design", name: "fdesign", icon: <MdEmail className="text-lg" /> },
+  { id: 4,title:"Api Intrigration", name: "api", icon: <MdEmail className="text-lg" /> }]
 
   return (
     <section id="services" className="text-gray-600 body-font">
@@ -14,74 +23,37 @@ const Services = () => {
         <div className="flex flex-wrap items-center">
           <div className="md:w-5/12">
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
-              <div className="flex items-center gap-x-2 bg-slate-100 rounded py-2 px-4">
-                <MdEmail className="text-lg" />
-                <span className="text-lg">
-                  Frontend
-                </span>
-              </div>
-              <div className="flex items-center gap-x-2 bg-slate-100 rounded py-2 px-4">
-                <MdEmail className="text-lg" />
-                <span className="text-lg">
-                  Backend
-                </span>
-              </div>
-              <div className="flex items-center gap-x-2 bg-slate-100 rounded py-2 px-4">
-                <MdEmail className="text-lg" />
-                <span className="text-lg">
-                  Database
-                </span>
-              </div>
-              <div className="flex items-center gap-x-2 bg-slate-100 rounded py-2 px-4">
-                <MdEmail className="text-lg" />
-                <span className="text-lg">
-                  Native
-                </span>
-              </div>
-              <div className="flex items-center gap-x-2 bg-slate-100 rounded py-2 px-4">
-                <MdEmail className="text-lg" />
-                <span className="text-lg">
-                  Native
-                </span>
-              </div>
-              <div className="flex items-center gap-x-2 bg-slate-100 rounded py-2 px-4">
-                <MdEmail className="text-lg" />
-                <span className="text-lg">
-                  Native
-                </span>
-              </div>
-              <div className="flex items-center gap-x-2 bg-slate-100 rounded py-2 px-4">
-                <MdEmail className="text-lg" />
-                <span className="text-lg">
-                  Native
-                </span>
-              </div>
-              <div className="flex items-center gap-x-2 bg-slate-100 rounded py-2 px-4">
-                <MdEmail className="text-lg" />
-                <span className="text-lg">
-                  Native
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-7/12 p-4">
-            <div className="flex rounded h-full bg-slate-100 p-8 flex-col">
-              <div className="flex items-center mb-3">
-                <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-slate-900 text-white flex-shrink-0">
-                  {/* icon */}
-                  <MdEmail />
+              {tabs.map(({ id, icon, name, title }) => (
+                <div onClick={() => setName(name)} key={id} className="flex items-center gap-x-2 bg-slate-100 rounded py-2 px-4">
+                  {icon}
+                  <span className="text-lg">
+                    {title}
+                  </span>
                 </div>
-                <h2 className="text-gray-900 text-lg title-font font-medium">
-                  Shooting Stars
-                </h2>
-              </div>
-              <div className="flex-grow">
-                <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                <a className="mt-3 text-slate-500 inline-flex items-center">Learn More
-                  {/* svg */}
-                </a>
-              </div>
+              ))}
             </div>
+            {
+              items.map(({ id, icon, title, dec }) => (
+                <div key={id} className="md:w-7/12 p-4">
+                  <div className="flex rounded h-full bg-slate-100 p-8 flex-col">
+                    <div className="flex items-center mb-3">
+                      <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-slate-900 text-white flex-shrink-0">
+                        {icon}
+                      </div>
+                      <h2 className="text-gray-900 text-lg title-font font-medium">
+                        {title}
+                      </h2>
+                    </div>
+                    <div className="flex-grow">
+                      <p className="leading-relaxed text-base">{dec}</p>
+                      <a className="mt-3 text-slate-500 inline-flex items-center">Learn More
+                        {/* svg */}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -90,10 +62,3 @@ const Services = () => {
 }
 
 export default Services;
-
-export async function getStaticProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts")
-  const data = await res.json()
-  console.log("data", data)
-
-}

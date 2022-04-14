@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Skill = ({ data }) => {
+const Skill = ({data}) => {
 
   return (
     <section id="skill" className="text-gray-600 body-font">

@@ -72,7 +72,7 @@ const Portfolio = (props) => {
                 <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                 <p className="leading-relaxed py-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
               </div>
-              <img alt="gallery" className="w-1/2" src="https://dummyimage.com/601x361" />
+              <img alt="gallery" className="w-1/2" src="./public/assets/img/hostel_app/account.PNG" />
             </div>
           </div>
         </div>

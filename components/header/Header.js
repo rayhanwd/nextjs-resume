@@ -10,21 +10,23 @@ class Header extends Component {
   render() {
     return (
       <aside className="bg-slate-800 border-r-2 border-blue-400">
-        <nav className="mt-6 px-3">
+        <nav className="flex items-center justify-around flex-col h-full">
           {this.state.navItem.map(item =>
-            <li className="list-none nav_link my-4 text-md cursor-pointer text-slate-200" key={item.id}>
+            <div className="list-none  nav_link text-md cursor-pointer text-slate-200" key={item.id}>
               <Link to={item.to} activeClass="text-slate-100 text-blue-400"
                 spy={true}
                 smooth={true}
                 duration={200}>
-                <span className="flex items-center gap-x-1">
+                <div className="flex items-center">
                  <span className="rotate-90">
                    {item.icon}
                  </span> 
-                  {item.name}
-                </span>
+                 <span className="pt-2">
+                 {item.name}
+                 </span>
+                </div>
               </Link>
-            </li>
+            </div>
           )}
         </nav>
       </aside>

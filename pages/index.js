@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaBars } from 'react-icons/fa';
 import Header from '../components/header/Header';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
@@ -13,7 +12,7 @@ import Portfolio from '../components/sections/Portfolio';
 import Services from '../components/sections/Services';
 import Contact from '../components/sections/Contact';
 import Footer from '../components/footer/Footer';
-const Index = ({skills}) => {
+const Index = ({skills,service}) => {
   useEffect(() => {
     AOS.init({
       duration: 1000
@@ -38,7 +37,7 @@ const Index = ({skills}) => {
         <Skill data={skills}/>
         <Testimonial />
         <Portfolio />
-        <Services />
+        <Services data={service}/>
         <Contact />
       </main>
       <Footer />
@@ -49,11 +48,15 @@ const Index = ({skills}) => {
 export default Index;
 
 export async function getStaticProps() {
+
   const res = await fetch('https://www.rayhanjs.com/api/skill')
   const skills = await res.json()
+  const res2 = await fetch('https://www.rayhanjs.com/api/service')
+  const service = await res2.json()
   return {
     props: {
       skills,
+      service
     },
   }
 }
